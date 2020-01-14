@@ -1,0 +1,57 @@
+$plavaBoja:#03416e;
+$sivaBoja: #929497;
+$zutaBoja: #FEE934;
+$textBoja: #ffffff;
+// $textBoja: #212121;
+
+
+@import "normalize";
+@import "header";
+@import "viewport";
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    // font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $sivaBoja;
+    // background-color: $zutaBoja;
+    background-color: #ffffff;
+    margin: 0;
+    text-align: center;
+    // background-image: url("../images/POZADINA2_BEZ_BELE.png");
+
+
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: $plavaBoja;
+    clear: both;
+    line-height: 1.2;
+    font-weight: 500;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 1110px;
+    margin: auto;
+}
+
+
+// .sticky {
+//     position: fixed;
+//     top: 0;
+//     // background-color: rgba(0, 0, 0, 0.9);
+//     background-color: #181818;
+// } 
