@@ -1,0 +1,100 @@
+@keyframes anime1 {
+    from {
+        transform: translateY(600px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(300px) translateX(100px) rotate(16deg);
+        opacity: 1
+    }
+}
+
+
+
+
+
+.animated {
+    animation-duration: .45s;
+    animation-fill-mode: both;
+}
+
+.animated2 {
+    animation-duration: .35s;
+    animation-fill-mode: both;
+}
+
+
+.animated3 {
+    animation-duration: .25s;
+    animation-fill-mode: both;
+}
+
+
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-5px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+@keyframes moveRight2 {
+    0% {
+        transform: translateX(-5px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+@keyframes moveRight3 {
+    0% {
+        transform: translateX(-45px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.moveRight {
+    animation-name: moveRight;
+    animation-delay: .3s;
+
+}
+
+.moveRight2 {
+    animation-name: moveRight;
+    animation-delay: .5s;
+
+}
+
+.moveRight3 {
+    animation-name: moveRight2;
+    animation-delay: .7s;
+
+
+}
