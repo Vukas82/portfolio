@@ -8,9 +8,9 @@
     align-items: center;
     position: relative;
     font-size: 1.3rem;
-    font-weight: 900;
+    font-weight: 400;
     line-height: 1.5;
-    letter-spacing: .33rem;
+    letter-spacing: .13rem;
 
     a {
         color: $textBoja;
@@ -21,7 +21,6 @@
         height: 100%;
         list-style: none;
         @include flex;
-        transition: all ease-in .15s;
 
         li {
             display: inline-block;
@@ -60,7 +59,7 @@
 
         li:hover::before {
             width: 50%;
-            height: .3rem;
+            height: .1rem;
         }
     }
 
@@ -76,9 +75,15 @@
         }
 
         li:hover {
-            box-shadow: -.3rem -.3rem .7rem #ffffff73, .3rem .3rem .5rem rgba(94, 104, 121, .288);
+            // box-shadow: -.3rem -.3rem .7rem #ffffff73, .3rem .3rem .5rem rgba(94, 104, 121, .288);
             box-shadow: -.3rem -.3rem .7rem #ffffff73, .3rem .3rem .5rem #0b1d3d49;
-            transform: translateX(1px) translateY(-1px) scale(1.05);
+            transform: translateX(.1rem) translateY(-.1rem) scale(1.05);
+        }
+
+        li:active {
+            transform: translateX(0) translateY(0) scale(1);
+            box-shadow: -.2rem -.2rem .4rem #ffffff73, .2rem .2rem .5rem #0b1d3d49;
+
         }
 
     }
@@ -89,9 +94,7 @@
         justify-content: flex-start;
 
         li {
-            padding: 0;
-            transition: all ease-in .15s;
-
+            transition: all ease .2s;
         }
 
         li:hover {

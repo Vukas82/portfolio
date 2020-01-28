@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Ginger_light';
+    src: url('f37ginger-light-webfont.eot');
+    src: url('f37ginger-light-webfont.eot?#iefix') format('embedded-opentype'),
+        url('f37ginger-light-webfont.woff2') format('woff2'),
+        url('f37ginger-light-webfont.woff') format('woff'),
+        url('f37ginger-light-webfont.ttf') format('truetype'),
+        url('f37ginger-light-webfont.svg#f37ginger-light-webfont') format('svg');
+}
+
+.fontpro,
+.fontpro-28169 {
+    font-family: 'Ginger_light', sans-serif;
+}

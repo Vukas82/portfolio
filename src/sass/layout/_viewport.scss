@@ -11,8 +11,16 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
         border-radius: 1rem;
+
+        h1 {
+            font-size: 6rem;
+            color: #fff;
+            padding-top: 6rem;
+            font-family: 'Space Mono', monospace;
+
+        }
 
         svg {
             padding-top: 5rem;
@@ -60,7 +68,7 @@
 
                 padding: 2rem 3rem;
 
-                font-size: 1.6rem;
+                font-size: $default-font-size;
                 line-height: 1.7em;
                 letter-spacing: -0.02em;
                 font-weight: 600;
@@ -158,258 +166,11 @@
     height: 60rem;
     background-color: transparent;
     overflow: hidden;
-
-    display: flex;
+    @include flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 
-    h3 {
 
-        font-weight: bolder;
-        z-index: 30;
-
-        letter-spacing: -0.05em;
-        line-height: 0.9em;
-        font-size: 6.5vw;
-        color: #fffade;
-        margin-bottom: 0.35em;
-    }
-
-    .box__arrow__link {
-        display: inline-block;
-        height: 4.2rem;
-        text-transform: uppercase;
-        border: .2rem solid #fff;
-
-        transition: 0.52s cubic-bezier(0.7, 0.3, 0, 1);
-
-        transform: translateX(-2.2rem);
-
-        font-size: 1.05rem;
-        letter-spacing: 0.1em;
-
-        .box__arrow__1 {
-            position: absolute;
-            height: 4.3rem;
-            width: 5rem;
-
-            top: -.2rem;
-            overflow: hidden;
-
-            right: 100%;
-
-            .arrow_head {
-                left: 50%;
-                top: 50%;
-                width: 2rem;
-                margin: -1.4rem 0 0 -1rem;
-                position: absolute;
-                height: 2.6rem;
-                overflow: hidden;
-
-                span {
-
-
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-
-                    transition: 0.45s cubic-bezier(0.7, 0.3, 0, 1);
-
-                    transform: translateX(-105%);
-                }
-
-                span::before {
-                    height: .2rem;
-                    width: 90%;
-                    left: 0;
-                    // left: 20px;
-                    margin-top: -.1rem;
-                    background-color: black;
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                }
-
-                span::after {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    width: .6rem;
-                    height: .6rem;
-                    margin: -.3rem 0 0 -.3rem;
-                    background: url(../images/arow_head_black.svg) no-repeat center center/100%;
-
-                }
-            }
-
-        }
-
-        .box__arrow__1::before {
-            transform: translateX(105%);
-
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4.2rem;
-            border-top: .2rem solid #fff;
-            border-bottom: .2rem solid #fff;
-
-            transition: 0.55s cubic-bezier(0.7, 0.3, 0, 1);
-
-            border-left: .2rem solid #fff;
-
-            transform-origin: 100% 0;
-            background-color: #FFF;
-
-            transition-delay: 0.22s;
-        }
-
-
-
-
-        .box__arrow__text {
-            padding: 0 1.6rem;
-            line-height: 3.6rem;
-
-        }
-
-        .box__arrow__2 {
-            position: absolute;
-            height: 4.3rem;
-            width: 5rem;
-
-            top: -.2rem;
-            left: 100%;
-            overflow: hidden;
-
-
-            .arrow_head {
-                left: 25%;
-                top: 25%;
-                width: 2rem;
-                margin: -1.4 0 0 -1rem;
-                position: absolute;
-                height: 2.6rem;
-                overflow: hidden;
-
-                span {
-
-
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    transition: 0.45s cubic-bezier(0.7, 0.3, 0, 1);
-                }
-
-                span::before {
-                    height: .2rem;
-                    width: 90%;
-                    left: 0;
-                    margin-top: -1px;
-                    background-color: black;
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                }
-
-                span::after {
-                    content: '';
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    width: .6rem;
-                    height: .6rem;
-                    margin: -.3rem 0 0 -.3rem;
-                    background: url(../images/arow_head_black.svg) no-repeat center center/100%;
-
-                }
-            }
-
-        }
-
-        .box__arrow__2::before {
-
-            transform: translateX(-105%);
-
-            content: url(../images/next_black.svg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 4.2rem;
-            border-top: .2rem solid #fff;
-            border-bottom: .2rem solid #fff;
-            transition: 0.55s cubic-bezier(0.7, 0.3, 0, 1);
-            border-left: .2rem solid #fff;
-            transform-origin: 100% 0;
-            transition-delay: 0.22s;
-
-            margin-left: -.3rem;
-            border-right: .2rem solid #fff;
-            transform-origin: 0 0;
-        }
-    }
-
-    .box__arrow__link:hover {
-        transform: translateX(2.5rem);
-        transition-delay: 0.15s;
-
-        .box__arrow__1 {
-            .arrow_head {
-                span {
-                    transform: translateX(0%);
-                    transition-delay: 0.22s;
-                }
-            }
-
-        }
-
-
-        .box__arrow__1::before {
-            transform: translateX(0%);
-            transition-delay: 0.22s;
-        }
-
-        .box__arrow__text {
-            transform: translateX(25px);
-        }
-
-
-
-
-
-        .box__arrow__2 {
-            left: 100%;
-
-            .arrow_head {
-                span {
-                    transform: translateX(0%); //bilo zakomentovano
-                    transition-delay: 0.22s;
-                    transform: translateX(-105%);
-                }
-            }
-
-        }
-
-
-        .box__arrow__2::before {
-            transform: translateX(-105%);
-            left: 0%;
-
-        }
-    }
 
     .line {
         width: 150%;
@@ -422,25 +183,16 @@
         opacity: 0;
     }
 
-    .work1 {
+    .work {
         width: 36rem;
         height: 18rem;
-        background-image: url('../images/prethodni_poslovi_1.1.png');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         position: absolute;
-        top: 0px;
-        left: 10%;
         z-index: 20;
         border: .5rem solid #fff;
         border-radius: 1rem;
-        box-sizing: border-box;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
 
         .mask {
             position: absolute;
@@ -449,14 +201,12 @@
             left: 25%;
             top: 25%;
             background-color: #000;
-            display: box;
-            display: flex;
-            justify-content: center;
-            box-orient: vertical;
+            @include flex;
+            justify-content: flex-start;
+            align-items: flex-start;
             flex-direction: column;
             transition: 0.45s cubic-bezier(0.62, 0.02, 0.34, 1);
             transform: scaleY(0);
-
             backface-visibility: hidden;
 
             h4 {
@@ -464,7 +214,7 @@
                 margin-left: 13%;
                 text-align: left;
                 margin-bottom: .08rem;
-                margin-top: 0;
+                margin-top: 1rem;
                 font-size: 2rem;
                 letter-spacing: -0.05em;
                 line-height: 2rem;
@@ -480,12 +230,10 @@
                 left: 13%;
                 bottom: 13%;
                 color: rgba(255, 255, 255, 0); // opacity: 0;
-
             }
 
             .span {
                 display: inline-block;
-
                 position: absolute;
                 bottom: .8rem;
                 right: 1rem;
@@ -498,9 +246,13 @@
                 color: rgba(255, 255, 255, 0); // opacity: 0;
 
             }
-
-
         }
+    }
+
+    .work1 {
+        background-image: url('../images/prethodni_poslovi_1.1.png');
+        top: 0px;
+        left: 10%;
     }
 
     .work1:hover {
@@ -510,7 +262,6 @@
             h4 {
                 color: #ffffff;
                 animation-name: moveRight2;
-
             }
 
             .cite {
@@ -526,84 +277,9 @@
 
 
     .work2 {
-        width: 36rem;
-        height: 18rem;
         background-image: url('../images/prethodni_poslovi_2.png');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: absolute;
         top: 40rem;
         right: 10%;
-        z-index: 20;
-        border: .5rem solid #fff;
-        border-radius: 1rem;
-        box-sizing: border-box;
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .mask {
-            position: absolute;
-            width: 50%;
-            height: 50%;
-            left: 25%;
-            top: 25%;
-            background-color: #000;
-            display: box;
-            display: flex;
-            justify-content: center;
-            box-orient: vertical;
-            flex-direction: column;
-            transition: 0.45s cubic-bezier(0.62, 0.02, 0.34, 1);
-            transform: scaleY(0);
-            backface-visibility: hidden;
-
-
-            h4 {
-                width: 54%;
-                margin-left: 13%;
-                text-align: left;
-                margin-bottom: .08rem;
-                margin-top: 0;
-                font-size: 2rem;
-                letter-spacing: -0.05em;
-                line-height: 2rem;
-                color: rgba(255, 255, 255, 0); // opacity: 0;
-                transform: translateX(-.5rem);
-            }
-
-            .cite {
-                display: inline-block;
-                position: absolute;
-                text-transform: uppercase;
-                font-size: 1rem;
-                left: 13%;
-                bottom: 13%;
-                color: rgba(255, 255, 255, 0); // opacity: 0;
-
-            }
-
-            .span {
-                display: inline-block;
-
-                position: absolute;
-                bottom: .8rem;
-                right: 1rem;
-                width: 4rem;
-                height: .4rem;
-                background-image: url(../images/next.svg);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                color: rgba(255, 255, 255, 0); // opacity: 0;
-
-            }
-
-
-        }
     }
 
     .work2:hover {
@@ -613,7 +289,6 @@
             h4 {
                 color: #ffffff;
                 animation-name: moveRight2;
-
             }
 
             .cite {
@@ -623,18 +298,12 @@
 
             .span {
                 animation-name: moveRight3;
-                // animation-name: animted3;
             }
         }
     }
 
-
-
-
-
-
-
 }
+
 
 .section2 {
     position: relative;
